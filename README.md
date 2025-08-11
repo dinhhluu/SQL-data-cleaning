@@ -26,7 +26,8 @@ CREATE TABLE club_member_info_cleaned (
 	job_title VARCHAR(50),
 	membership_date NVARCHAR(50)
 );
-##Copy all values from original table
+
+##Copy all values to the original table
 ```sql
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
