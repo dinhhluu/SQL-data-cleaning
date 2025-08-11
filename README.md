@@ -34,8 +34,14 @@ SET full_name = Trim(upper(full_name));
 ```
 
 ##Copy all values to the original table
+
 ```sql
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
 ```
-
+Clean data 
+Inconsistent letter case - Fix with Upper 
+```sql
+UPDATE club_member_info_cleaned
+SET full_name = Trim(upper(full_name));
+```
