@@ -47,3 +47,9 @@ Inconsistent letter case - Fix with Upper
 UPDATE club_member_info_cleaned
 SET full_name = Trim(upper(full_name));
 ```
+## Replace age is null 
+```sql
+SELECT AGE, MODE(AGE)
+from club_member_info cmi
+ORDER BY MODE(AGE) DESC;
+```
