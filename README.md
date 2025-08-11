@@ -26,6 +26,12 @@ CREATE TABLE club_member_info_cleaned (
 	job_title VARCHAR(50),
 	membership_date NVARCHAR(50)
 );
+Clean data 
+Inconsistent letter case - Fix with Upper 
+```sql
+UPDATE club_member_info_cleaned
+SET full_name = Trim(upper(full_name));
+```
 
 ##Copy all values to the original table
 ```sql
