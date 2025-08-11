@@ -12,9 +12,11 @@
 |mendie alexandrescu|46|single|malexandrescu8@state.gov|504-918-4753|34 Delladonna Terrace,New Orleans,Louisiana|Systems Administrator III|3/12/1921|
 | fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 
-#COPY THE TABLE
-##Create a new table for cleaning 
+# COPY THE TABLE
+## Create a new table for cleaning 
+
 Let's generate a new table where we can manipulate and restructure the data without modifying the original dataset
+
 ```sql
 CREATE TABLE club_member_info_cleaned (
 	full_name VARCHAR(50),
@@ -33,13 +35,13 @@ UPDATE club_member_info_cleaned
 SET full_name = Trim(upper(full_name));
 ```
 
-##Copy all values to the original table
+## Copy all values to the original table
 
 ```sql
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info;
 ```
-Clean data 
+## Clean data 
 Inconsistent letter case - Fix with Upper 
 ```sql
 UPDATE club_member_info_cleaned
