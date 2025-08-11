@@ -52,3 +52,4 @@ SET full_name = Trim(upper(full_name));
 SELECT MODE(AGE)
 from club_member_info cmi;
 ```
+<img width="210" height="80" alt="image" src="https://github.com/user-attachments/assets/04511820-71a2-4fbd-9f5c-9a8c54559437" />
